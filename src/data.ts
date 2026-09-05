@@ -9,11 +9,13 @@ export type Product = {
   description: string;
 };
 
+const base = import.meta.env.BASE_URL;
+
 export const gallery = [
-  { src: '/images/guo.jpg', label: 'Interior da loja', className: 'gallery-main' },
-  { src: '/images/goooo.jpg', label: 'Vista aérea da Outlet.Go', className: 'gallery-tall' },
-  { src: '/images/goo.jpg', label: 'Fachada Outlet.Go', className: 'gallery-wide' },
-  { src: '/images/go.jpg', label: 'Experiência no interior', className: 'gallery-small' },
+  { src: `${base}images/guo.jpg`, label: 'Interior da loja', className: 'gallery-main' },
+  { src: `${base}images/goooo.jpg`, label: 'Vista aérea da Outlet.Go', className: 'gallery-tall' },
+  { src: `${base}images/goo.jpg`, label: 'Fachada Outlet.Go', className: 'gallery-wide' },
+  { src: `${base}images/go.jpg`, label: 'Experiência no interior', className: 'gallery-small' },
 ];
 
 const px = (id: string) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&h=650&w=940`;
